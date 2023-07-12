@@ -163,6 +163,8 @@ git rebase producao
 git add . = Uso em caso de conflito
 git rebase --continue = Uso em caso de conflito
 
+# Git fetch
+Baixa as atuaalizações do repositório remoto porém não aplica no repositório. 
 
 
 
