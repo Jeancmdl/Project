@@ -134,7 +134,35 @@ Remover uma branch:
 git branch -d <nome_brench_a_remover>
 
 # Merge
- 
+Quando precisamos concatenas mudanças entre branchs distintas usamos o comando 'git merge'. 
+
+Ex: 
+branch1 (homologacao) 
+branch2 (produção) 
+
+Se quisermos concatenar infrmações da branch de 'homologação' na branch de produção, basta rodar o 'git merge' estando
+na branch de 'produção'. 
+
+Ex: 
+git checkout producao - Alteramos para a branch de produção (revise com git branch)
+git merge homoloogacao - Commit é criado junto ao merge. 
+git push - Empurramos a mudança para o servidor de versionamento. 
+
+# Rebase
+Usar em situações onde existêm divergência entre versões de branch no sentido de criação de novos arquivos, onde não há muitas possibilidades de 
+conflito. 
+Um exemplo de uso é quando recebo um código com commits atrás do meus commits, e preciso incluir estes commits anteriores ao meus, assim aplicamos um rebase. 
+Caracteristicas: 
+- Cria um linha linear de visualização de andamento do projeto.
+- "Remove" último commit, aplica os commits da outra branch e por fim commita as alterações do commit removido por último.
+
+Como usar:
+git checkout master
+git rebase producao
+-- Resolvo eventuais conflitos e adiciono o arquivo ajustado
+git add . = Uso em caso de conflito
+git rebase --continue = Uso em caso de conflito
+
 
 
 

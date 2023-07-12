@@ -1,0 +1,18 @@
+git add . = Adiciona arquivos ao commit.
+git commit -m "Comentário da ação" = Registra o commir com comentário
+git status = Revisa o status do repositório, se existem alterações a serem commitada
+git config user.name "Nome User"
+git config user.email "mymail@gmail.com"
+git branch -a = Lista branchs e qual esta em uso. 
+Dica: Criar um repositório vazio (sem README.md) caso queira incluir uma pasta no repositório git recém-criado. 
+
+MUITO CUIDADO COM ESSE COMANDO, ELE FAZ COM QUE O ESTADO DO SEU 
+REPOSITÓRIO LOCAL FIQUEI COM AS ALTERAÕES ATÉ O "~1" -1 COMMIT ATRÁS: 
+> git reset HEAD~1 --hard = Volta 1 commit, como que se ele nunca tivesse existido. Além de apagar o commit ele volta para o estado do commit anterior
+
+ESTE PODEMO UTILIZAR COM MAIOR SEGURANÇA, O ÚLTIMO COMMIT É REMOVIDO, MAS AS AÇÕES APLICADAS NÃO SÃO SOBRESCRITAS: 
+> git reset HEAD~1 --soft
+
+
+
+
