@@ -1,0 +1,141 @@
+# Introdução: 
+O trabalho com git na maior parte do tempo consiste em três tarefas básicas:
+-- Editar
+-- Commitar
+-- Sincronizar com o repositório remoto
+
+# Configuração:
+git config --global user.name "Nome User"
+git config --globar user.email "jeancarlosm.lima@gmail.com"
+
+# Update de repositórios:
+git add <nome file> - Adiciona um arquivo para push no git. 
+git add . - Adiciona os arquivos da pasta ao commit. 
+
+git commit - Um editor é aberto para escrever sobre a mudança | git commit -m "Atalho para comentário"
+
+git status - Status geral do git.
+
+git log - Ver lista de commit, autor e data. Mostra basicamente informações dos últimos commits realizados. 
+
+git push <remote> <branch> - Aqui empurramos um update para uma branch especifica.
+     - Branch são versões separadas do projeto principal. Estas podem ser utilizadas em testes e receberem um "merge" assim que o teste for 
+       homologado.
+git config --global core.editor vim 
+
+
+#State de arquivo
+- untracked = Não monitorado 
+- modified = Modificado 
+- staged = Preparado 
+- commited = Consolidado
+
+git diff - DIferença entra commits e branchs
+Ex: git diff e3r3324534  wr123q2321 - DIferença entre commits e branchs
+gir diff HEAD~1  - HEAD aponta para o último commit da branch. 
+                   ~1  = Compara o que existe no repositório local com o commit anterior. 
+
+git pull - Baixar commit dos colaboradores. (Sincronização) 
+
+# Colaboradores
+Colaboradores são capazes de enviar push para meu repositório. 
+
+# Git Checkout
+git checkout <commit> <file> - Fazer navegação no histórico do repositório.
+      Neste comando os arquivos de um commit anterior é carregado.
+
+Ex:
+```
+commit 4b4e311aa3add26272115e3304a90f9ccf9d6d72
+Author: Jean Lima <jean.lima@mbsec.com.br>
+Date:   Mon Jul 10 15:36:03 2023 -0300
+```
+
+ Ex: git checkout 4b4e311aa3add26272115e3304a90f9ccf9d6d72
+
+Para retornar para a branch principal basta: 
+git checkout main
+
+O checkout vai alterar todo o estado para o estado atual do commit escolhido. 
+
+# Outros usos para Git Checkout:
+Desfaz uma alteração em um arquivo ou pasta com base no último commit: 
+git checkout -- Git ou git checkout -- . 
+
+# Caso a alteração já tenha sido adicionada com git add, basta: 
+git checkuot HEAD -- <path_file>
+
+# Git REVERT vai reverter um commit:
+Vai reverter toda e qualquer aleteração, se você apagou uma linha, ele vai adicionar. Se você criou uma linha, ele vai remover.
+
+Ex: git revert HEAD <commit>
+
+Após rodar o comando o arquivo alterado, será revertido. 
+
+# git reset - ATENÇÃO: NÃO UTILIZAR EM CASO DE DE COMMIT PÚBLICADO, POIS UMA PESSOA PODE JÁ TER BAIXADO. 
+git reset HEAD~1 *Neste exemplo voltamos 1 COMMIT conforme definido. 
+
+git reset HEAD~1 --soft = Este utiliza o --soft por padrão, logo não precisa informar. Deixa as alerações como estão.
+git reset HEAD~1 --hard = Além de apagar o commit volta para o status do commit do estado anterior. Neste caso especificou-se "~1" isso indica
+                          que o retorno vai ser 1 commit atrás --hard voltando para o status do commit anterior.
+
+# Conflitos: 
+Gerindo coflitos no GIT. Isso ocorre quando a mesma linha é editada em diferentes locais de colaboração. 
+
+
+# Exemplo de uso para a criação de um repositório: 
+# Cria uma nova pasta chamada "Study"
+mkdir Study
+
+# Navega para a pasta "Study"
+cd Study/
+
+# Inicializa um novo repositório Git na pasta "Study"
+git init
+
+# Configura o nome de usuário para os commits
+git config user.name "Jeancmdl"
+
+# Configura o email do usuário para os commits
+git config user.email "jeanxxxx@gmail.com"
+
+# Cria um arquivo chamado "teste" com o conteúdo "1"
+echo "1" > teste
+
+# Adiciona todas as alterações para o próximo commit
+git add .
+
+# Commit das alterações com uma mensagem "Only test"
+git commit -m "Only test"
+
+# Adiciona um remote chamado "origin" com o URL do repositório
+git remote add origin git@github.com:Jeancmdl/Study.git
+
+# Verifica os remotes configurados
+git remote -v
+
+# Realiza o push para o branch "master" no remote "origin" e configura a upstream
+git push -u origin master
+
+
+# Branch
+Concatenar conteudo de uma branch na branch atual.
+
+Criar uma branch nova: 
+git branch <nova_branch>
+
+Alterar para um nova branch:
+git checkout <nome_nova_branch>
+
+Criar a nova branch no repositório remoto: 
+git push --set-upstream origin <nome_brench_criada>
+
+Remover uma branch: 
+git branch -d <nome_brench_a_remover>
+
+# Merge
+ 
+
+
+
+
