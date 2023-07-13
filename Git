@@ -164,8 +164,58 @@ git add . = Uso em caso de conflito
 git rebase --continue = Uso em caso de conflito
 
 # Git fetch
-Baixa as atuaalizações do repositório remoto porém não aplica no repositório. 
+Baixa as atuaalizações do repositório remoto porém não aplica no repositório.
+- Melhor para manter o histórico do desenvolvimento, não cria um commit a mais de merge. 
+
+Basicamente isso se aplica quando estamos em um repositório local desatualizado em relação ao nó remoto. Ou seja, novos commits
+foram gerado. Deste modo acabei editando este repositório local e preciso inserir meu código neste repositório remoto. 
+
+Comandos:
+git getch = Baixa as informações atualizadas.
+git rebase = Junta as informações novas com as que possuo na branch local.
+git status = Verifica arquivo de conflito ajustado
+git add . = Adiciona arquivo ajustado
+git rebase --continue = Continua o rebase após ajustar ocnflitos.
+git push = Envia para o repositório remoto. 
+
+# Git Tag
+- Util para definir versões estáveis do projeto. 
+- Tag é semelhante a uma branch, com a diferença de que ela não recebe mais commits. 
+
+Criar a tag: 
+git tag v1.0
+
+Ver tag:
+git tag
+
+Enviar tag para o repositório remoto: 
+git push origin v1.0
+
+Acessando um repositório em uma tag especifica: 
+git checkout v.10 = Neste modo vocêe vê o projeto na versão especificada. 
+git checkout master =  Volta para a branch atual. 
+
+Poblema:
+Em caso de lançamentos que afetam versões anteriores do software, não é uma boa prática usar tag, pois estas não recebem novos commits. Assim podemos 
+optar por uso de branchs.
+
+# Fork
+Este é o formato utilizado para colaborar em projetos OpenSource. Basicamente você faz uma cópia do repositório para seu usuário, assim consegue
+trabalhar em melhorias para o projeto. Quando finalizado estas melhorias podem ser solicitadas um Pull Request para o projeto principal. 
+
+# Issues
+- Reporte de bugs/tarefas que precisam ser ajustadas ou realizadas. 
+Quando aberta podemos marcar direto pela interface seu tipo, responder, solicitar ajuda.
+
+Podemos fechar através de um commit com o comentário "Meu texto. Closes #1" 
+
+# Pull Reuest
+- Simbolo de colaboração.
+- Solcita que suas alteraçõe sejam unidas a uma branch ou repositório que sofreu fork.
 
 
+# Download Pull request in my repository: 
+get fetch origin pull/ID/head:NOME_NOVA_BRANCH
+git checkout NOME_NOVA_BRANCH
 
-
+:
