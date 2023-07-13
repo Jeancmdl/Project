@@ -218,4 +218,4 @@ Podemos fechar através de um commit com o comentário "Meu texto. Closes #1"
 get fetch origin pull/ID/head:NOME_NOVA_BRANCH
 git checkout NOME_NOVA_BRANCH
 
-:
+
