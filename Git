@@ -47,7 +47,7 @@ git checkout <commit> <file> - Fazer navegação no histórico do repositório.
 Ex:
 ```
 commit 4b4e311aa3add26272115e3304a90f9ccf9d6d72
-Author: Jean Lima <jean.lima@mbsec.com.br>
+Author: Jean Lima <youremail@gmail.com>
 Date:   Mon Jul 10 15:36:03 2023 -0300
 ```
 
