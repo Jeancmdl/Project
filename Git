@@ -6,7 +6,7 @@ O trabalho com git na maior parte do tempo consiste em três tarefas básicas:
 
 # Configuração:
 git config --global user.name "Nome User"
-git config --globar user.email "jeancarlosm.lima@gmail.com"
+git config --globar user.email "youremail@gmail.com"
 
 # Update de repositórios:
 git add <nome file> - Adiciona um arquivo para push no git. 
