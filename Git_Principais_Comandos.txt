@@ -1,18 +1,17 @@
 git add . = Adiciona arquivos ao commit.
-git commit -m "Comentário da ação" = Registra o commir com comentário
-git status = Revisa o status do repositório, se existem alterações a serem commitada
-git config user.name "Nome User"
+git commit -m "Comentário da ação" = Registra o commit com um comentário.
+git status = Revisa o status do repositório, verificando se existem alterações a serem commitadas.
+git config user.name "Nome do usuário"
 git config user.email "mymail@gmail.com"
-git branch -a = Lista branchs e qual esta em uso. 
-Dica: Criar um repositório vazio (sem README.md) caso queira incluir uma pasta no repositório git recém-criado. 
+git branch -a = Lista as branches e indica qual está em uso.
 
-MUITO CUIDADO COM ESSE COMANDO, ELE FAZ COM QUE O ESTADO DO SEU 
-REPOSITÓRIO LOCAL FIQUEI COM AS ALTERAÕES ATÉ O "~1" -1 COMMIT ATRÁS: 
-> git reset HEAD~1 --hard = Volta 1 commit, como que se ele nunca tivesse existido. Além de apagar o commit ele volta para o estado do commit anterior
+Dica: Crie um repositório vazio (sem README.md) caso queira incluir uma pasta em um repositório Git recém-criado.
 
-ESTE PODEMO UTILIZAR COM MAIOR SEGURANÇA, O ÚLTIMO COMMIT É REMOVIDO, MAS AS AÇÕES APLICADAS NÃO SÃO SOBRESCRITAS: 
+MUITO CUIDADO COM ESTE COMANDO: ele faz com que o estado do seu repositório local volte para o commit anterior (~1), descartando as alterações:
+
+> git reset HEAD~1 --hard  
+Volta 1 commit, como se ele nunca tivesse existido. Além de remover o commit, retorna o repositório para o estado do commit anterior.
+
+ESTE COMANDO PODE SER UTILIZADO COM MAIOR SEGURANÇA: o último commit é removido, mas as alterações aplicadas não são sobrescritas:
+
 > git reset HEAD~1 --soft
-
-
-
-
